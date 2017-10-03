@@ -1,18 +1,23 @@
-
 # SQL Server on Linux Unattended install
 
 For SQL Server on Linux, there are several capabilities that are useful in unattended install scenarios:
-•	You can specify environment variables prior to the install that are picked up by the install process, to enable customization of SQL Server settings such as TCP port, Data/Log directories, etc.
-•	You can pass command line options to Setup.
-•	You can create a script that installs SQL Server and then customizes parameters post-install with the mssql-conf utility.
+
+ 
+
 
 Here is a sample script that would further ease the unattended install process, and would allow you to:
-•	Have one script across multiple distributions
-•	Choose the components installed (SQL Server, SQL Agent, SQL FTS, SQL HA)
-•	Configure common install parameters via a config file
-•	Set up some SQL Server on Linux best practices we have documented such as tempdb configuration and processor affinity, which are not part of the core install
-•	Enable you to specify a custom post-install .sql file to run once SQL Server is installed
+      •Have one script across multiple distributions
+      
+      •Choose the components installed (SQL Server, SQL Agent, SQL FTS, SQL HA)
+      
+      •Configure common install parameters via a config file
+      
+      •Set up some SQL Server on Linux best practices we have documented such as tempdb configuration and processor affinity, which are not part of the core install
+      
+      •Enable you to specify a custom post-install .sql file to run once SQL Server is installed
+      
 
+Steps to run the script:
 
 1.	Download the script:   
       git clone https://github.com/denzilribeiro/sqlunattended.git
